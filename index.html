@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="myapp">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <title>一点资讯</title>
+    <link rel="stylesheet" href="css/materialize.min.css">
+  <link rel="stylesheet" href="css/index.css">
+   
+</head>
+<body ng-controller="myctrl">
+
+  <div class="top">
+    <div class="top-bar">
+      <div class="user button-collapse">
+        <img src="img/renaissance_articles_main_list_list.png" alt="">
+      </div>
+      <div class="discover ">
+        <img src="img/discover.png" alt="" >
+      </div>
+      <div class="logo">
+        <img src="img/renaissance_logo_w.png" alt="">
+        <img src="img/refresh.png" alt="" class = 'icon-A'>
+      </div>
+    </div>
+      
+    <div class="top-header">
+      <div class="user-more">
+        <img src="img/articles_down.png" alt="">
+      </div>
+      <div class="user-lists  ">
+        <ul class="tabs  ">
+            <li class="tab col s2 best"><a class='active ' href="#test1">首页</a></li>
+          <li class="tab col s2"><a class='' href="#test2">热点新闻<img src="img/fire.png" alt=""></a></li>
+          <li class="tab col s2 icon-item"><a class='' href="#test3">娱乐</a></li>
+          <li class="tab col s2 icon-item"><a class='' href="#test4">数码</a></li>
+          <li class="tab col s2 icon-item"><a class=' ' href="#test5">体育</a></li>
+          <li class="tab col s2 icon-item"><a class='' href="#test6">军事</a></li>
+          <li class="tab col s2 icon-item"><a class='' href="#test7">汽车</a></li>
+          <li class="tab col s2 icon-item"><a class='' href="#test8">人文</a></li>
+          <li class="tab col s2 icon-item"><a class='' href="#test9">健康</a></li>
+          <li class="tab col s2 icon-item"><a class='' href="#test10">财经</a></li>
+          <li class="tab col s2 icon-item"><a class='' href="#test11">旅行</a></li>
+          
+
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+  <div class="loading">
+    <div class="loading-inner"></div>
+  </div>
+  <div class="today">{{ today | date:'fullDate' }}</div>
+  <div id="articles" class="col s12 ">
+   
+  
+       <div class="nomore">全部加载完成</div>
+  </div>
+  <div class="article row" id='yangben' >
+    <div class="article-line"></div>
+    <div class="article-action" style = 'display:none'>
+      <div class="article-action-like ">
+        <div class="article-action-inner"></div>
+      </div>
+      <div class="article-action-dislike">
+        <div class="article-action-inner"></div>
+      </div>
+    </div>
+    <div class="article-link col s12 " >
+      <img src="" alt="" class="img">
+      <div class="article-title"> </div>
+      <div class="clear"></div>
+      <div class="article-info">
+        <div class="article-more">
+          <img src="img/renaissance_articles_main_list_feedback.png" alt="">
+        </div>
+        <div class="article-source"> </div>
+        <div class="article-date">
+          
+        </div>
+        <div class="article-comments">
+          <img src="img/renaissance_articles_main_list_comment.png" alt="">
+          
+        </div>
+        <div class="article-like">
+          <img src="img/renaissance_articles_main_list_like.png" alt="">
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="refresh-btn">
+    <img src="img/refresh.png" alt="">
+  </div>
+<div id="user-mask" ></div>
+    <!--左侧跳转页面布局-->
+    <div class="side-nav guest " id='slide-out'>
+      <div class="weibo-login">
+        <img src="img/renaissance_articles_weibo.png" alt="">
+        <span>微博登录</span>
+      </div>
+      <div class="guide-btn">
+        <span>表达兴趣，让资讯立即与众不同！</span>
+        <img src="img/renaissance_articles_guide_arrow.png" alt="">
+      </div>
+      <div class="guest-login-btn">
+        已有账号？点此登录
+      </div>
+      <div class="guide-dn">
+        <img src="img/renaissance_articles_download.png" alt="">
+        <span>省流量，下载App</span>
+      </div>
+      <div class="entrypoint">
+        <a href="" class="user-btn">自媒体入口</a>
+        <a href="" class="user-btn">校园大使入口</a>
+      </div>
+    </div>
+    <!--右侧搜索跳转-->
+    <div class="discover-panel">
+      <div class="discover-search">
+        <div class="discover-search-back">
+          <img src="img/renaissance_articles_main_btn_back_white.png" alt="">
+        </div>
+      </div>
+      <div class="discover-search-input-box">
+        <div class="discover-search-input-icon">
+          <img src="img/renaissance_articles_main_explore_search_icon.png" alt="">
+        </div>
+        <div class="discover-search-input-wrapper">
+          <input type="text" value = '搜索并订阅你感兴趣的任意频道'>
+        </div>
+      </div>
+      <div class="search-suggestion">
+        <div class="search-suggestion-in"></div>ner
+      </div>
+      <div class="cates"> 
+        <div class="spinner_with_logo">
+          <img src="" alt="">
+          <img src="" alt="">
+        </div>
+      </div>  
+      <div class="discovers">
+        <div class="spinner_with_logo">
+          <img src="img/renaissance_share_spinner_logo.png" alt="" class = 'spinner_logo'>
+          <img src="img/renaissance_share_default_ptr_rotate.png" alt="" class = 'spinner_ring'>
+        </div>
+      </div>
+    </div>
+</body>
+<script src='js/data.js'></script>
+<script src="js/zepto.min.js"></script>
+<script src = 'js/index.js'></script>
+<script src="js/angular.js"></script>
+<script>
+  var myapp=angular.module('myapp',[]);
+  myapp.controller('myctrl', ['$scope', function($scope){
+    $scope.today=new Date();
+  }])
+</script>
+</html>

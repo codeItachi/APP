@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+	<title>登陆</title>
+	 <link rel="stylesheet" href="css/materialize.min.css">
+	 <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+<div id="user-mask" ></div>
+	  <!--左侧跳转页面布局-->
+    <div class="side-nav guest " id='slide-out'>
+    	<div class="weibo-login">
+    		<img src="img/renaissance_articles_weibo.png" alt="">
+    		<span>微博登录</span>
+    	</div>
+    	<div class="guide-btn">
+    		<span>表达兴趣，让资讯立即与众不同！</span>
+    		<img src="img/renaissance_articles_guide_arrow.png" alt="">
+    	</div>
+    	<div class="guest-login-btn">
+    		已有账号？点此登录
+    	</div>
+    	<div class="guide-dn">
+    		<img src="img/renaissance_articles_download.png" alt="">
+    		<span>省流量，下载App</span>
+    	</div>
+    	<div class="entrypoint">
+    		<a href="" class="user-btn">自媒体入口</a>
+    		<a href="" class="user-btn">校园大使入口</a>
+    	</div>
+    </div>
+</body>
+<script src='js/zepto.min.js'></script>
+<script src='js/index.js'></script>
+<script>
+		document.addEventListener('plusready',function(){
+            alert(1);
+			var w=plus.webview.currentWebview();
+			var id=w.xx;
+			var shuju=liebiaos.filter(function(v.i){
+				return v.id=id;
+			})
+			 $('.button-collapse').tap(function(){
+			 	w.hide();
+			 })
+		})
+		
+	</script>
+</html>
